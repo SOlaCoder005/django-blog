@@ -39,10 +39,10 @@ class Migration(migrations.Migration):
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=200, unique=True)),
                 ('email_address', models.EmailField(max_length=254)),
-                ('text_body', models.TextField()),
+                ('body', models.TextField()),
                 ('created_on', models.DateTimeField(auto_now_add=True)),
                 ('approved', models.BooleanField(default=False)),
-                ('posted', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='comments', to='blog.post')),
+                ('post', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='comments', to='blog.post')),
             ],
             options={
                 'ordering': ['-created_on'],
