@@ -4,7 +4,7 @@
 <html class="h-100">
 
 <head>
-    <title>Django Blog</title>
+    <title>CodeStar Blog</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
@@ -57,7 +57,6 @@
             </div>
         </div>
     </nav>
-
     <div class="container">
         <div class="row">
             <div class="col-md-8 offset-md-2">
@@ -72,6 +71,7 @@
     </div>
 
     <main class="flex-shrink-0 main-bg">
+
         {% block content %}
         <!-- Content Goes here -->
         {% endblock content %}
@@ -90,7 +90,7 @@
             let messages = document.getElementById('msg');
             let alert = new bootstrap.Alert(messages);
             alert.close();
-        }, 2500);
+        }, 2000);
     </script>
 </body>
 
